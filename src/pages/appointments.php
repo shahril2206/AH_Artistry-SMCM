@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../../config/connection.php");
-include("../server.php");s
+include("../server.php");ss
 ?>
 
 <?php

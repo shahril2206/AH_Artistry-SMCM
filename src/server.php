@@ -54,6 +54,17 @@ if(isset($_POST["book_now"])){
     }else{
         $additional_msg = "-";
     }
+    $reserved = "SELECT * FROM appointment WHERE AptDate = '$apt_date' AND AptTime = '$apt_time'";
+    $reserved_result = mysqli_query($conn, $reserved) or die("Error connecting to the database");
+
+    // Check if any row matches the date and time
+    if ($reserved_result->num_rows > 0) {
+    // The date and time are already reserved
+    echo '<script>
+            alert("The selected date and time are already reserved. Please choose another slot.");
+            window.location="book.php";
+          </script>';
+    }else{
         // send email to admin
         $subject = "AH_Artistry New Appointment Booking";
 
@@ -130,6 +141,7 @@ if(isset($_POST["book_now"])){
                 alert("Your booking has been received. We will response you through email or contact no.\n\nThank you!");
                 window.location="book.php"
                 </script>';
+    }
 }
 
 if(isset($_POST["set_appointment"])){

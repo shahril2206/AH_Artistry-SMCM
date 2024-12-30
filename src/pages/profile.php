@@ -5,7 +5,7 @@ include("../server.php");
 ?>
 
 <?php
-// Check if the user is logged in
+// Check if the user is logged ins
 if (!isset($_SESSION['admin'])) {
     header("Location: login.php");
     exit();

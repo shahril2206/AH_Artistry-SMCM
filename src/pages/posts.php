@@ -4,7 +4,7 @@ include("../../config/connection.php");
 include("../server.php");
 ?>
 
-<?php
+<?phps
 // Check if the user is logged in
 if (!isset($_SESSION['admin'])) {
     header("Location: login.php");

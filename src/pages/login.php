@@ -2,7 +2,7 @@
 session_start();
 include("../../config/connection.php");
 include("../server.php");
-?>
+?>s
 
 <!DOCTYPE html>
 <html lang="en">

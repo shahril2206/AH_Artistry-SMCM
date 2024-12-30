@@ -1,4 +1,4 @@
-<?php
+<?phps
 session_start();
 include("../../config/connection.php");
 include("../server.php");

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../../config/connection.php");
-include("../server.php");ss
+include("../server.php");
 ?>
 
 <?php
@@ -498,4 +498,5 @@ Kuching & Kota Samarahan
     </footer>
 </body>
 <script src="../js/main.js?v=<?php echo time(); ?>"></script>
+
 </html>
